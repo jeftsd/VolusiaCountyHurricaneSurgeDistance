@@ -45,7 +45,6 @@ UPDATE volusia.parcel p
   WHERE  p.parid = s.parid;
 ```
 
-Please note that there are many parcels that had either invalid or null geometry data, therefor there are many parcels in the `surge_parcels` table that have a `NULL` distance/category listed. This is expected behaviour.
 
 
 **Option 2:** Another option is to follow the same steps I did to acquire the distances which requires calculating the distances between the storm surges and parcel geometries.
@@ -55,4 +54,4 @@ Please note that there are many parcels that had either invalid or null geometry
 3. Import the layer and its data into PostgreSQL using the DB Manager Import/Export feature.
 4. Run the code from the file `calculate_surge_parcels.sql` which will create the `surge_parcels` and then fill it with all of the relevant data, using the geometry from `volusia.gis_parcels`
 
-NOTE: The CSV may look empty but if you scroll through it there are entries. I used the `parcel` table to instantiate the `surge_parcels` table and those empty/null cells are results of `parids` that don't have matching geometries in `volusia.gis_parcels`.
+NOTE: The CSV may look empty but if you scroll through it there are entries. I used the `parcel` table to instantiate the `surge_parcels` table and those empty/null cells are results of `parids` that don't have matching geometries in `volusia.gis_parcels`. This is expected behaviour.
