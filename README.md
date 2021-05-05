@@ -19,7 +19,8 @@ Information about the Storm Surge Categories:
 # Instructions:
 The repository has the following files: `surge_parcels_table.csv`, `calculate_surge_parcels.sql`, and `build_tables.sql`.
 
-**Option 1:** The easiest way to import the storm surge distances data is to download `surge_parcels_table.csv`, import it to your database, and join it with the parcels table on the parid.
+##Option 1:
+The easiest way to import the storm surge distances data is to download `surge_parcels_table.csv`, import it to your database, and join it with the parcels table on the parid.
 
 To import the `surge_parcels` table:
 ```postgres
@@ -47,7 +48,8 @@ UPDATE volusia.parcel p
 
 
 
-**Option 2:** Another option is to follow the same steps I did to acquire the distances which requires calculating the distances between the storm surges and parcel geometries.
+##Option 2:
+Another option is to follow the same steps I did to acquire the distances which requires calculating the distances between the storm surges and parcel geometries.
 
 1. Download the Shape files for the Volusia County Hurricane Storm Surge Lines [here](http://maps.vcgov.org/gis/download/shpfiles/stormsurge.zip).
 2. Load the Shape file (`Strm_SurgeFDEM2017.shp`) into QGIS as a layer.
