@@ -37,10 +37,9 @@ COPY volusia.surge_parcels FROM 'C:\temp\cs540\surge_parcels_table.csv' WITH (FO
 To join the `surge_parcels` table with `parcel`:
 ```postgres
 ALTER TABLE volusia.parcel
-	ADD column dist_storm_surge float,
-	ADD column storm_surge_category integer;
-SELECT * FROM volusia.parcel p LEFT OUTER JOIN volusia.surge_parcels s ON (p.parid=s.parid) WHERE s.dist_storm_surge IS NOT NULL;
-  UPDATE volusia.parcel p
+  ADD column dist_storm_surge float,
+  ADD column storm_surge_category integer;
+UPDATE volusia.parcel p
   SET    dist_storm_surge = s.dist_storm_surge, storm_surge_category = s.storm_surge_category
   FROM   volusia.surge_parcels s
   WHERE  p.parid = s.parid;
