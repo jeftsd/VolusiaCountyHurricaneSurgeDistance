@@ -58,6 +58,6 @@ Another option is to follow the same steps I did to acquire the distances which 
 
 The QGIS Layer should look something like the picture below, if you run the Catgeorize function on the layer using the `cat` column:
 
-![Final QGIS Layer](https://github.com/jeftsd/VolusiaCountyHurricaneSurgeDistance/blob/master/QGIS_Storm_Surge_Layer.jpg?raw=true)
+![Final QGIS Layer](https://github.com/jeftsd/VolusiaCountyHurricaneSurgeDistance/blob/master/QGIS_Storm_Surge_Layer.png)
 
 NOTE: The CSV may look empty but if you scroll through it there are entries. I used the `parcel` table to instantiate the `surge_parcels` table and those empty/null cells are results of `parids` that don't have matching geometries in `volusia.gis_parcels`. This is expected behaviour.
