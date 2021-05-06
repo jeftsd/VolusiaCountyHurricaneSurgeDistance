@@ -57,6 +57,7 @@ Another option is to follow the same steps I did to acquire the distances which 
 4. Run the code from the file `calculate_surge_parcels.sql` which will create the `surge_parcels` and then fill it with all of the relevant data, using the geometry from `volusia.gis_parcels`
 
 The QGIS Layer should look something like the picture below, if you run the Catgeorize function on the layer using the `cat` column:
-https://github.com/jeftsd/VolusiaCountyHurricaneSurgeDistance/blob/master/QGIS_Storm_Surge_Layer.png
+
+![Final QGIS Layer](https://github.com/jeftsd/VolusiaCountyHurricaneSurgeDistance/blob/master/QGIS_Storm_Surge_Layer.jpg?raw=true)
 
 NOTE: The CSV may look empty but if you scroll through it there are entries. I used the `parcel` table to instantiate the `surge_parcels` table and those empty/null cells are results of `parids` that don't have matching geometries in `volusia.gis_parcels`. This is expected behaviour.
